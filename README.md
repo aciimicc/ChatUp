@@ -11,6 +11,7 @@
 - Tehcnologies: **Node.js with Express.js**
 - Database: **MongoDB with Mongoose**
 - Communication protocol: **WebSockets(Socket.io for Node.js)**
+- 
 **Deployment & hosting**
   - Frontend hosting: **Vercel, Netlify, GitHub Pages or Firebase Hosting**
   - Backend hosting: **Vercel**
