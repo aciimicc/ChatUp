@@ -11,7 +11,7 @@
 - Tehcnologies: **Node.js with Express.js**
 - Database: **MongoDB with Mongoose**
 - Communication protocol: **WebSockets(Socket.io for Node.js)**
-- 
+  
 **Deployment & hosting**
   - Frontend hosting: **Vercel, Netlify, GitHub Pages or Firebase Hosting**
   - Backend hosting: **Vercel**
@@ -22,7 +22,6 @@
 This project was collaboratively developed by:
 
 - **Aldin Ćimić**
-- **Hamza Hadžiabdić**
 - **Bekir Ćorić**
   
 ## 🚀 Features
