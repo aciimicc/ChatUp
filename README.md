@@ -13,7 +13,7 @@
 - Communication protocol: **WebSockets(Socket.io for Node.js)**
 **Deployment & hosting**
   - Frontend hosting: **Vercel, Netlify, GitHub Pages or Firebase Hosting**
-  - Backend hosting: **Heroku, Railway, or AWS EC2**
+  - Backend hosting: **Vercel**
   - **Note**: This is a subject for change because it is too early in development to choose front and backend hosting. Since this is a college project, we are not funded and we will evaluate which one of these servers have the best free tier.
     
 ## 👨‍💻 Authors
