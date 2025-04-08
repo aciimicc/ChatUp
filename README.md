@@ -8,13 +8,13 @@
 - **Flutter**: Flutter is used for converting the design of the application into the app, we are using flutter because one code is for Android, iOS and Web.
 
 **Backend**:
-- Tehcnologies: **Node.js with Express.js**
-- Database: **MongoDB with Mongoose**
-- Communication protocol: **WebSockets(Socket.io for Node.js)**
+- Tehcnologies: **Flutter**
+- Database: **Firestore Database**
+- Communication protocol: **Firebase**
   
 **Deployment & hosting**
   - Frontend hosting: **Vercel, Netlify, GitHub Pages or Firebase Hosting**
-  - Backend hosting: **Vercel**
+  - Backend hosting: **Firebase**
   - **Note**: This is a subject for change because it is too early in development to choose front and backend hosting. Since this is a college project, we are not funded and we will evaluate which one of these servers have the best free tier.
     
 ## 👨‍💻 Authors
