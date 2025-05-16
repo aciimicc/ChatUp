@@ -1,34 +1,16 @@
-# ChatUp
-##  📄 Project Overwiew
-**ChatUp** is a simple chat application that can send and recieve messages in real-time, from iOS, Android or Web. This project was developed for a Software Engineering course, and it shows group work, and it shows the ability of the persons that are assigned to develop software withing specific time frame.
+# chatup
 
-## 🛠 Technologies Used
+A new Flutter project.
 
-**Frontend**:
-- **Flutter**: Flutter is used for converting the design of the application into the app, we are using flutter because one code is for Android, iOS and Web.
+## Getting Started
 
-**Backend**:
-- Tehcnologies: **Flutter**
-- Database: **Firestore Database**
-- Communication protocol: **Firebase**
-  
-**Deployment & hosting**
-  - Frontend hosting: **Vercel, Netlify, GitHub Pages or Firebase Hosting**
-  - Backend hosting: **Firebase**
-  - **Note**: This is a subject for change because it is too early in development to choose front and backend hosting. Since this is a college project, we are not funded and we will evaluate which one of these servers have the best free tier.
-    
-## 👨‍💻 Authors
+This project is a starting point for a Flutter application.
 
-This project was collaboratively developed by:
+A few resources to get you started if this is your first Flutter project:
 
-- **Aldin Ćimić**
-- **Bekir Ćorić**
-  
-## 🚀 Features
-- **User Authentication**: Users can register and log in using an email and password, secure authentication using JWT (JSON Web Token) or Firebase  Authentication
-- **Real-time Messaging**: Users can send and receive messages instantly, and messages appear in real-time without needing to refresh the page
-- **Message History**: Messages are stored in a database for future references, users can view past conversation
-- **Modern design**: Easy to use design, by combining modern and relaxing colors, it makes it easy for everyone to use
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-## How to use the app
-TODO..... This will be available later in the development production
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
