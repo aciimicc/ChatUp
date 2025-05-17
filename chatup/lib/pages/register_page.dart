@@ -1,18 +1,20 @@
-import 'package:chatapptute/components/my_textfield.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+import '../components/my_button.dart';
+import '../components/my_textfield.dart';
 
-
+class RegisterPage extends StatelessWidget {
   final TextEditingController _emailController = TextFieldController();
   final TextEditingController _pwController = TextFieldController();
+  final TextEditingController _confirmPwController = TextFieldController();
   
-  LoginPage({super.key});
+  
+  RegisterPage({super.key});
 
-  void login(){
+  // register method
+  void register(){}
 
-  }
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +32,7 @@ class LoginPage extends StatelessWidget {
           const SizeBox(height:50),
           
           Text(
-            "Welcome back, you've been missed!"
+            "Lets create an account for u",
             style:TextStyle(
               color:Theme.of(context).colorScheme.primary,
               fontSize:16,
@@ -48,18 +50,25 @@ class LoginPage extends StatelessWidget {
             const SizedBox(height: 10),
 
              MyTextField(
+              hintText:"Confirm Password",
+              obscureText: true,
+              controller: _confirmPwController,
+            ), 
+
+            const SizedBox(height: 10),
+
+            MyTextField(
               hintText:"Password",
               obscureText: true,
               controller: _pwController,
             ), 
 
-            
            const SizedBox(height: 25), 
 
            //login button
            MyButton(
-            text:"Login",
-            onTap: login,
+            text:"Register",
+            onTap: register,
            )
             
             const SizedBox(height: 25), 
@@ -69,11 +78,11 @@ class LoginPage extends StatelessWidget {
               mainAxisAligment: MainAxisAligment.center,
               children: [
              Text(
-              "Not a member? ",
+              "Already have an account?",
               style:TextStle(color: Theme.of(context).colorScheme.primary),
               ),
              Text(
-              "Register now ",
+              "Login now ",
               style:TextStyle(
                 fonWeight:FontWeight.bold,
               style:TextStle(color: Theme.of(context).colorScheme.primary),
@@ -81,8 +90,11 @@ class LoginPage extends StatelessWidget {
              ),
             ],
             ),
+           ),
           },
         ),
     );
   },
 },
+  }
+}
