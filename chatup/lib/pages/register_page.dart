@@ -9,7 +9,10 @@ class RegisterPage extends StatelessWidget {
   final TextEditingController _confirmPwController = TextFieldController();
   
   
-  RegisterPage({super.key});
+  //tap to go to register page
+  final void Function()?;
+  
+  RegisterPage({super.key, required this.onTap});
 
   // register method
   void register(){}
@@ -81,7 +84,9 @@ class RegisterPage extends StatelessWidget {
               "Already have an account?",
               style:TextStle(color: Theme.of(context).colorScheme.primary),
               ),
-             Text(
+             GestureDetector(
+                onTap: onTap,
+                child:
               "Login now ",
               style:TextStyle(
                 fonWeight:FontWeight.bold,

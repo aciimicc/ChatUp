@@ -9,10 +9,10 @@ class LoginPage extends StatelessWidget {
   final TextEditingController _pwController = TextFieldController();
   
 //tap to go to register page
-void Function ()? onTap;
+final void Function ()? onTap;
 
 
-  LoginPage({super.key});
+  LoginPage({super.key, required this.onTap});
 
   void login(){
 
