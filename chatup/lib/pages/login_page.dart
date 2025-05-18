@@ -1,4 +1,5 @@
-import 'package:chatapptute/components/my_textfield.dart';
+import 'package:chatup/components/my_button.dart';
+import 'package:chatupp/components/my_textfield.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -7,6 +8,10 @@ class LoginPage extends StatelessWidget {
   final TextEditingController _emailController = TextFieldController();
   final TextEditingController _pwController = TextFieldController();
   
+//tap to go to register page
+void Function ()? onTap;
+
+
   LoginPage({super.key});
 
   void login(){
@@ -72,7 +77,9 @@ class LoginPage extends StatelessWidget {
               "Not a member? ",
               style:TextStle(color: Theme.of(context).colorScheme.primary),
               ),
-             Text(
+             GestureDetector(
+              onTap: onTap,
+              child:
               "Register now ",
               style:TextStyle(
                 fonWeight:FontWeight.bold,
