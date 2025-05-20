@@ -29,8 +29,7 @@ final void Function ()? onTap;
     bulider: (context)=> AlertDialog(
     title:Text(e.toString()),
     ),
-    
-    );
+  );
 
   }
 
