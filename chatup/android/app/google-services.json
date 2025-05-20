@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "839123437645",
+    "project_id": "chatup-a221d",
+    "storage_bucket": "chatup-a221d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839123437645:android:6464c7bcd327f93e64f404",
+        "android_client_info": {
+          "package_name": "com.aldinbekir.chatup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPBuJgiC9VWd4QUO0WK-S9theja58wFos"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839123437645:android:f80c8e8654d92ba264f404",
+        "android_client_info": {
+          "package_name": "com.example.chatup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPBuJgiC9VWd4QUO0WK-S9theja58wFos"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
