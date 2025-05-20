@@ -3,7 +3,9 @@ import'package:chatup/themes/light_mode.dart';
 import 'package:flutter/material.dart';
 import 'pages/login_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitiallized(),
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
