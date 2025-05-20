@@ -14,10 +14,39 @@ class RegisterPage extends StatelessWidget {
   
   RegisterPage({super.key, required this.onTap});
 
-  // register method
-  void register(){}
+ // register method
+void register(BuildContext context) {
+  // get auth service
+  final _auth = AuthService();
 
-  
+  // passwords match -> create user 
+  if (_pwController.text == _confirmPwController.text) {
+    try {
+      _auth.signUpWithEmailPassword(
+        _emailController.text,
+        _pwController.text,
+      );
+    } catch (e) {
+      // handle error
+    } showDialog(
+    context: context,
+    bulider: (context)=> AlertDialog(
+    title:Text(e.toString()),
+    ), // AlertDialog
+  );
+  }
+}
+}
+// passwords dont match -> tell user to fix
+else {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text("Passwords dont match!"),
+      ), // AlertDialog
+    );
+  }
+ // passwords dont match -> tell user to fix
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,7 +100,7 @@ class RegisterPage extends StatelessWidget {
            //login button
            MyButton(
             text:"Register",
-            onTap: register,
+            onTap:()=> register(context),
            )
             
             const SizedBox(height: 25), 
@@ -97,9 +126,4 @@ class RegisterPage extends StatelessWidget {
             ),
            ),
           },
-        ),
-    );
-  },
-},
-  }
-}
+        
