@@ -14,7 +14,25 @@ final void Function ()? onTap;
 
   LoginPage({super.key, required this.onTap});
 
-  void login(){
+  void login(BuildContext context) async { 
+  // auth service
+  final authService=AuthService();
+
+  //try login
+  try{
+    await authService.signInWithEmailPassword(_emailController.text, _pwController.text);
+  }
+  // catch any errors
+  catch (e){
+   showDialog(
+    context: context,
+    bulider: (context)=> AlertDialog(
+    title:Text(e.toString()),
+    ),
+    
+    );
+
+  }
 
   }
 
@@ -64,7 +82,7 @@ final void Function ()? onTap;
            //login button
            MyButton(
             text:"Login",
-            onTap: login,
+            onTap: ()=> login (context),
            )
             
             const SizedBox(height: 25), 
