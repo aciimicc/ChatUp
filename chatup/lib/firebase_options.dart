@@ -72,4 +72,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'chatup-a221d.firebasestorage.app',
     iosBundleId: 'com.example.chatup',
   );
+
 }
