@@ -1,5 +1,5 @@
 import 'package:chatup/components/my_button.dart';
-import 'package:chatupp/components/my_textfield.dart';
+import 'package:chatup/components/my_textfield.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {

@@ -5,8 +5,8 @@ class MyTextField extends StatelessWidget {
   final bool obscureText;
   final TextEditingController controller;
 
-  const MyTextField({
-    super.key
+  MyTextField({
+    super.key,
     required this.hintText,
     required this.obscureText,
     required this.controller,
@@ -15,7 +15,7 @@ class MyTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding:const EdgeInsets.symmetric(horiznotal:25.0)
+        padding:const EdgeInsets.symmetric(horizontal:25.0)
         child: TextField(
         obscureText: obscureText, 
         controller: controller,
@@ -31,6 +31,7 @@ class MyTextField extends StatelessWidget {
         hintText: hintText,
         hintStyle: TextStyle(color:Theme.of(context).colorScheme.primary),
       ), // InputDecoration
-    ); // TextField
+    ),
+     ); // TextField
   }
 }
