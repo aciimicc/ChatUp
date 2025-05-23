@@ -1,3 +1,4 @@
+import 'package:chatup/components/chat_bubble.dart';
 import 'package:chatup/components/my_textfield.dart';
 import 'package:chatup/services/auth/auth_service.dart';
 import 'package:chatup/services/chat/chat_service.dart';
@@ -30,7 +31,12 @@ class ChatPage extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(title: Text(receiverEmail)),
+      appBar: AppBar(
+        title: Text(receiverEmail),
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.grey,
+        elevation: 0,
+      ),
       body: Column(
         children:[
           Expanded(
@@ -79,13 +85,18 @@ class ChatPage extends StatelessWidget{
         crossAxisAlignment: 
           isCurrentUser ? CrossAxisAlignment.end: CrossAxisAlignment.start,
         children: [
-          Text(data['message']),
+         ChatBubble(
+         message: data["message"], 
+         isCurrentUser: isCurrentUser
+         )
         ],
       ),
       );
       }
   Widget _buildUserInput(){
-    return Row(
+    return Padding(
+      padding: const EdgeInsets.only(bottom:50.0),
+    child: Row(
       children: [
 
         Expanded(
@@ -96,11 +107,20 @@ class ChatPage extends StatelessWidget{
           ),
         ),
         // sendbutton
-        IconButton(
-          onPressed: sendMessage,
-          icon: const Icon(Icons.arrow_upward),
+        Container(
+          decoration: const BoxDecoration(
+            color: Colors.teal,
+            shape: BoxShape.circle,
           ),
+          margin: const EdgeInsets.only(right: 25),
+        child: IconButton(
+          onPressed: sendMessage,
+          icon: const Icon(Icons.arrow_upward, color: Colors.white,),
+          ),
+        ),
       ],
+
+    ),
     );
   }
 
