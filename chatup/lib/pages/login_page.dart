@@ -1,12 +1,13 @@
 import 'package:chatup/components/my_button.dart';
 import 'package:chatup/components/my_textfield.dart';
+import 'package:chatup/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
 
 
-  final TextEditingController _emailController = TextFieldController();
-  final TextEditingController _pwController = TextFieldController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _pwController = TextEditingController();
   
 //tap to go to register page
 final void Function ()? onTap;
@@ -16,7 +17,7 @@ final void Function ()? onTap;
 
   void login(BuildContext context) async { 
   // auth service
-  final authService=AuthService();
+  final authService= AuthService();
 
   //try login
   try{
@@ -26,7 +27,7 @@ final void Function ()? onTap;
   catch (e){
    showDialog(
     context: context,
-    bulider: (context)=> AlertDialog(
+    builder: (context)=> AlertDialog(
     title:Text(e.toString()),
     ),
   );
