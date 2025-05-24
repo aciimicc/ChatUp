@@ -39,21 +39,21 @@ final void Function ()? onTap;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor:Theme.of(context).colorScheme.background
+        backgroundColor:Theme.of(context).colorScheme.surface,
         body: Center(
           child:Column(
-            mainAxisAligment:MainAxisAligment.center,
-          children:{
+            mainAxisAlignment:MainAxisAlignment.center,
+          children:[
             Icon(
-              Icons.message
+              Icons.message,
               size:60,
               color: Theme.of(context).colorScheme.primary,
               ),    
 
-          const SizeBox(height:50),
+          const SizedBox(height:50),
           
           Text(
-            "Welcome back, you've been missed!"
+            "Welcome back, you've been missed!",
             style:TextStyle(
               color:Theme.of(context).colorScheme.primary,
               fontSize:16,
@@ -83,31 +83,32 @@ final void Function ()? onTap;
            MyButton(
             text:"Login",
             onTap: ()=> login (context),
-           )
+           ),
             
             const SizedBox(height: 25), 
 
             //register now
             Row(
-              mainAxisAligment: MainAxisAligment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
              Text(
               "Not a member? ",
-              style:TextStle(color: Theme.of(context).colorScheme.primary),
+              style: TextStyle(color: Theme.of(context).colorScheme.primary),
               ),
              GestureDetector(
               onTap: onTap,
-              child:
+              child: Text(
               "Register now ",
-              style:TextStyle(
-                fonWeight:FontWeight.bold,
-              style:TextStle(color: Theme.of(context).colorScheme.primary),
-             ),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              color:Theme.of(context).colorScheme.primary),
+              ),
              ),
             ],
-            ),
-          },
-        ),
+          ),
+        ],
+      ),
+    ),
     );
-  },
-},
+  }
+}

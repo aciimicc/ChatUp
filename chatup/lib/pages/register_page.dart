@@ -1,16 +1,17 @@
+import 'package:chatup/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
 import '../components/my_button.dart';
 import '../components/my_textfield.dart';
 
 class RegisterPage extends StatelessWidget {
-  final TextEditingController _emailController = TextFieldController();
-  final TextEditingController _pwController = TextFieldController();
-  final TextEditingController _confirmPwController = TextFieldController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _pwController = TextEditingController();
+  final TextEditingController _confirmPwController = TextEditingController();
   
   
   //tap to go to register page
-  final void Function()?;
+  final void Function()? onTap;
   
   RegisterPage({super.key, required this.onTap});
 
@@ -28,15 +29,15 @@ void register(BuildContext context) {
       );
     } catch (e) {
       // handle error
-    } showDialog(
+    showDialog(
     context: context,
-    bulider: (context)=> AlertDialog(
+    builder: (context)=> AlertDialog(
     title:Text(e.toString()),
     ), // AlertDialog
   );
   }
 }
-}
+
 // passwords dont match -> tell user to fix
 else {
     showDialog(
@@ -46,22 +47,23 @@ else {
       ), // AlertDialog
     );
   }
+}
  // passwords dont match -> tell user to fix
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor:Theme.of(context).colorScheme.background
+        backgroundColor:Theme.of(context).colorScheme.surface,
         body: Center(
           child:Column(
-            mainAxisAligment:MainAxisAligment.center,
-          children:{
+            mainAxisAlignment:MainAxisAlignment.center,
+          children:[
             Icon(
-              Icons.message
+              Icons.message,
               size:60,
               color: Theme.of(context).colorScheme.primary,
               ),    
 
-          const SizeBox(height:50),
+          const SizedBox(height:50),
           
           Text(
             "Lets create an account for u",
@@ -101,29 +103,32 @@ else {
            MyButton(
             text:"Register",
             onTap:()=> register(context),
-           )
+           ),
             
             const SizedBox(height: 25), 
 
             //register now
             Row(
-              mainAxisAligment: MainAxisAligment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
              Text(
               "Already have an account?",
-              style:TextStle(color: Theme.of(context).colorScheme.primary),
+              style:TextStyle(color: Theme.of(context).colorScheme.primary),
               ),
              GestureDetector(
                 onTap: onTap,
-                child:
-              "Login now ",
-              style:TextStyle(
-                fonWeight:FontWeight.bold,
-              style:TextStle(color: Theme.of(context).colorScheme.primary),
+                child:Text(
+                  "Login now ",
+                  style:TextStyle(
+                    fontWeight:FontWeight.bold,
+                    color: Theme.of(context).colorScheme.primary),
+                ),
              ),
-             ),
-            ],
+              ],
             ),
-           ),
-          },
-        
+          ],
+          ),
+        ),
+    );
+  }
+}

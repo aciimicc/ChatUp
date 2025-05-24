@@ -1,3 +1,5 @@
+import 'package:chatup/pages/login_page.dart';
+import 'package:chatup/pages/register_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginOrRegister extends StatefulWidget {
